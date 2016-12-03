@@ -80,13 +80,7 @@
     //     $("ol").append(localStorage.getItem("Front"));
     // });
     // });
- function check(){
-        if(localStorage.getItem("Back").equals(localStorage.getItem("Done"))){
-          alert("oh hail ye");
-        }else{
-          alert("try again");
-        }
-}
+
 
   $( document ).ready(function() {
 
@@ -95,7 +89,7 @@
       });
 
      $("#done").click(function(){
-            var input =$("#done").val();
+            var input =$("#next").value();
             console.log(input);
             localStorage.setItem("Done", input);
             var storedBackValue = localStorage.getItem("Done");
@@ -103,7 +97,13 @@
       });
 
       
-
+ function check(){
+        if(input.val().equals(localStorage.getItem("Back"))){
+          alert("Correct!");
+        }else{
+          alert("Try again");
+        }
+}
      
 
 
@@ -112,7 +112,7 @@
       <h1></h1>
       <hr>
       <h2>
-        <input type = "text" id = "next" value = "Your Answer"  onchange='';>    
+        <input type = "text" id = "next" placeholder = "Your Answer"  onchange='';>    
         <input type = "button" id = "done" value = "Done" onclick="check()";>
 
       </h2>
