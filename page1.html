@@ -11,7 +11,7 @@
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     input[type=text] {
     width: 100%;
-    padding: 60px 10px;
+    padding: 50px 10px;
     margin: 8px 0;
     box-sizing: border-box;
 }
@@ -27,6 +27,14 @@
         resize: none;
     }
     
+    h3{
+      text-align: center;
+    }
+
+    h4{
+      text-align: center;
+    }
+
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
     .row.content {height: 450px}
     
@@ -125,6 +133,7 @@ function clearIt(){
 }
 });
 </script>
+
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -156,9 +165,12 @@ function clearIt(){
       <p><a href="#">Link</a></p>
       <p><a href="#">Link</a></p> -->
     </div>
+    <h3>Is there a quiz yet?</h3>
+    <h4>Please enter the front and back of your flashcard:  </h4>
+
     <div class="col-sm-8 text-left"> 
-            Front: <textarea class="text" type = "text" value = "Front" id='front' rows="4" cols="50"></textarea>
-            Back: <textarea class="text" type = "text" value = "Back" id='back' rows="4" cols="50"></textarea>
+            Front: <textarea class="text" type = "text" value = "Front" id='front' rows="8" cols="50"></textarea>
+            Back: <textarea class="text" type = "text" value = "Back" id='back' rows="8" cols="50"></textarea>
       
       <!-- <form action="demo_form.asp">
         Front: <input type="text" name="usrname"><br>
@@ -167,11 +179,9 @@ function clearIt(){
         Back: <input type="text" name="usrname"><br>
         <input type="submit" value="Submit">
       </form> -->
-     <!--  <h1>Welcome</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <hr>
-      <h3>Test</h3>
-      <p>Lorem ipsum...</p> -->
+     
+            <!-- <h3>Test</h3>
+      <p>Lorem ipsum...</p> --> 
     </div>
     <div class="col-sm-2 sidenav">
       <div class="well">
