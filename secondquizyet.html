@@ -84,26 +84,45 @@
 
   $( document ).ready(function() {
 
-      $('h1').append(localStorage.getItem("Front"));
+      $('h1').append("QuizYet Team 2016");
       // $('h2').append(localStorage.getItem("Back"));
       });
+//    $("#done").click(function(){
+//        var textarea =$("#front").val();
+//        console.log(textarea);
+//        localStorage.setItem("Front", textarea);
+//        var storedFrontValue = localStorage.getItem("Front");
+//        console.log(storedFrontValue);
+//        Front: <textarea class="text" type = "text" value = "Front" id='front' rows="4" cols="50"></textarea>
+
+//                <textarea class="text" type = "text" value = "Done" id='done' rows="4" cols="50"></textarea>
+
+
+
 
      $("#done").click(function(){
-            var input =$("#next").value();
-            console.log(input);
-            localStorage.setItem("Done", input);
+            var textarea =$("#done").value();
+            console.log(textarea);
+            localStorage.setItem("Done", textarea);
             var storedBackValue = localStorage.getItem("Done");
             console.log(storedBackValue);
       });
 
-      
- function check(){
-        if(input.val().equals(localStorage.getItem("Back"))){
-          alert("Correct!");
-        }else{
-          alert("Try again");
-        }
-}
+      var us = prompt("Front: " + localStorage.getItem("Front") + "\n" + "Back:" , "answer");
+
+      if( us != localStorage.getItem("Back")){
+        alert("Try again");
+      }
+      else{
+        alert("Correct");
+      }
+//  function check(next){
+//         if(next == localStorage.getItem("Back")){
+//           alert("Correct!");
+//         }else{
+//           alert("Try again");
+//         }
+// }
      
 
 
@@ -112,8 +131,10 @@
       <h1></h1>
       <hr>
       <h2>
-        <input type = "text" id = "next" placeholder = "Your Answer"  onchange='';>    
-        <input type = "button" id = "done" value = "Done" onclick="check()";>
+       <!--  <input type = "text" id = "next" placeholder = "Your Answer"  onclick = "check(next)";></input>
+        <textarea class="text" type = "text" value = "Done" id='done' rows="4" cols="50"></textarea>
+
+        <input type = "button" id = "done" value = "Done" onclick="check()";></input> -->
 
       </h2>
     </div>
