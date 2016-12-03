@@ -108,14 +108,32 @@
             console.log(storedBackValue);
       });
 
+
       var us = prompt("Front: " + localStorage.getItem("Front") + "\n" + "Back:" , "answer");
 
-      if( us != localStorage.getItem("Back")){
-        alert("Try again");
-      }
+      var acceptable = false;
+
+      while(!acceptable){
+        if( us != localStorage.getItem("Back")){
+        us = prompt("Try Again! Front: " + localStorage.getItem("Front") + "\n" + "Back:" , "answer");
+        }
       else{
         alert("Correct");
+        acceptable = true;
+        }
       }
+
+
+      // var us = prompt("Front: " + localStorage.getItem("Front") + "\n" + "Back:" , "answer");
+
+      // if( us != localStorage.getItem("Back")){
+      //   alert("Try again");
+      //   // prompt("Front: " + localStorage.getItem("Front") + "\n" + "Back:" , "answer")
+      // }
+      // else{
+      //   alert("Correct");
+      // }
+
 //  function check(next){
 //         if(next == localStorage.getItem("Back")){
 //           alert("Correct!");
